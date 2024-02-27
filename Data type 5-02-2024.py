@@ -182,19 +182,47 @@ myfunc()
 
 print("Python is " + x)
 
-# Palabra clave Global
-
-x = "awesome"
+# Palabra clave Global --> una palabra clave que permite a un usuario modificar una variable fuera del alcance actual.
 
 def myfunc():
+  global x
   x = "fantastic"
-  print("Python is " + x)
 
 myfunc()
 
 print("Python is " + x)
 
-# Palabra clave Global --> una palabra clave que permite a un usuario modificar una variable fuera del alcance actual.
+# Empleando la palabra global para cambiar una variable dentro de una función:
 
+x = "awesome"
 
-# crear un numero random y almacenarlo en un archivo txt
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+# --- Ejercicios:
+
+print("\n  Ejercicios \n")
+
+carname = "Volvo"
+x = 50
+
+x = 5
+y = 10
+print(x + y)
+
+x = 5
+y = 10
+z = x + y
+print(z)
+
+x , y, z = "Orange", "Banana", "Cherry"
+x = y = z = "Orange"
+
+def myfun():
+  global x
+  x = "fantastic"
